@@ -3,7 +3,28 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/css/form.css">
         <title>Personal Blog</title>
     </head>
-    <body></body>
+    <body>
+        <header>
+            <nav></nav>
+        </header>
+        <div class="color-theme"></div>
+        <main>
+            <div class="col"><div class="left-div"></div></div>
+            <div class="col">
+                <h2>What's on your mind</h2>
+                <form action="" method="post">
+                    <label for="username">Username</label><br>
+                    <input type="text" id="username" name="username"><br>
+                    <label for="title">Title</label><br>
+                    <input type="text" id="title" name="title"><br>
+                    <label for="content">Content</label><br>
+                    <textarea name="content" id="content" cols="30" rows="5"></textarea><br>
+                    <input type="submit" id="btnSubmit">
+                </form>
+            </div>
+        </main>
+    </body>
 </html>
