@@ -42,3 +42,19 @@ textarea {
     height: 300%;
     border-radius: 50%;
 }
+
+.error {
+    position: relative;
+    display: block;
+    border-color: red;
+}
+
+.error::after {
+    display: block;
+    position: absolute;
+    content: "Please enter a value";
+    color: red;
+    font-size: smaller;
+    top: 0px;
+    left: 80px;
+}

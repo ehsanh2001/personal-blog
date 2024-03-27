@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./assets/css/form.css">
+        <link rel="stylesheet" href="./assets/css/form.css" />
         <title>Personal Blog</title>
     </head>
     <body>
@@ -12,19 +12,30 @@
         </header>
         <div class="color-theme"></div>
         <main>
-            <div class="col"><div class="left-div"><h2>Personal Blog</h2></div></div>
+            <div class="col">
+                <div class="left-div"><h2>Personal Blog</h2></div>
+            </div>
             <div class="col">
                 <h2>What's on your mind</h2>
-                <form action="" method="post">
-                    <label for="username">Username</label><br>
-                    <input type="text" id="username" name="username"><br>
-                    <label for="title">Title</label><br>
-                    <input type="text" id="title" name="title"><br>
-                    <label for="content">Content</label><br>
-                    <textarea name="content" id="content" cols="30" rows="5"></textarea><br>
-                    <input type="submit" id="btnSubmit">
+                <form id="blog-form" action="" method="post">
+                    <label for="username" id="username-label" >Username</label
+                    ><br />
+                    <input type="text" id="username" name="username" /><br />
+                    <label for="title" id="title-label">Title</label><br />
+                    <input type="text" id="title" name="title" /><br />
+                    <label for="content" id="content-label">Content</label
+                    ><br />
+                    <textarea
+                        name="content"
+                        id="content"
+                        cols="30"
+                        rows="5"
+                    ></textarea
+                    ><br />
+                    <input type="submit" id="btnSubmit" />
                 </form>
             </div>
+            <script src="./assets/js/form.js"></script>
         </main>
     </body>
 </html>
