@@ -1,5 +1,8 @@
 "use strict";
 
+const SUN_EMOJI = "☀️";
+const MOON_EMOJI = "🌙";
+
 const usernameEl = document.getElementById("username");
 const usernameLabelEl = document.getElementById("username-label");
 const titleEl = document.getElementById("title");
@@ -7,8 +10,11 @@ const titleLabelEl = document.getElementById("title-label");
 const contentEl = document.getElementById("content");
 const contentLabelEl = document.getElementById("content-label");
 
+const btnTheme = document.getElementById("btn-theme");
+
 document.getElementById("blog-form").addEventListener("submit", formSubmit);
 document.getElementById("blog-form").addEventListener("keydown", clearError);
+btnTheme.addEventListener("click", changeTheme);
 
 function formSubmit(event) {
     event.preventDefault();
@@ -16,6 +22,7 @@ function formSubmit(event) {
     if (allInputsExist()) {
         storePost();
         clearInputs();
+        location.href = "./blog.html";
     }
 }
 
@@ -66,4 +73,9 @@ function clearError(event) {
             .getElementById(event.target.id + "-label")
             .classList.remove("error");
     }
+}
+
+function changeTheme() {
+    if (btnTheme.textContent === SUN_EMOJI) btnTheme.textContent = MOON_EMOJI;
+    else btnTheme.textContent = SUN_EMOJI;
 }

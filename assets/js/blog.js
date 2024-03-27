@@ -1,6 +1,15 @@
 "use strict";
 
+const SUN_EMOJI = "☀️";
+const MOON_EMOJI = "🌙";
+
+const btnTheme = document.getElementById("btn-theme");
+btnTheme.addEventListener("click", changeTheme);
+
 document.addEventListener("DOMContentLoaded", loadData);
+document
+    .getElementById("btnBack")
+    .addEventListener("click", () => (location.href = "./index.html"));
 
 function loadData() {
     const blogData = JSON.parse(localStorage.getItem("blogData")) || [];
@@ -32,4 +41,9 @@ function createCard(blogPost) {
     contentEl.innerHTML = blogPost.content;
     cardDiv.appendChild(contentEl);
     return cardDiv;
+}
+
+function changeTheme() {
+    if (btnTheme.textContent === SUN_EMOJI) btnTheme.textContent = MOON_EMOJI;
+    else btnTheme.textContent = SUN_EMOJI;
 }

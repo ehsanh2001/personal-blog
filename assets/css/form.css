@@ -3,6 +3,13 @@ body {
     height: 100%;
 }
 
+header{
+    display: flex;
+    padding: 10px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 main {
     display: flex;
     height: 100%;
@@ -57,4 +64,10 @@ textarea {
     font-size: smaller;
     top: 0px;
     left: 80px;
+}
+
+#btn-theme{
+    font-size: 200%;
+    background-color:white;
+    border:none;
 }

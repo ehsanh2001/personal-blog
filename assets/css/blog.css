@@ -5,11 +5,14 @@ header {
     display: flex;
     border-bottom: 8px double grey;
 }
-header button {
+header .buttons {
+    display: flex;
     height: 24px;
+    align-items: center;
     margin-left: auto;
     align-self: center;
 }
+
 main {
     border-bottom: 8px double grey;
 }
@@ -38,4 +41,10 @@ footer {
 
 .card .content {
     padding: 0px 30px;
+}
+
+#btn-theme{
+    font-size: 200%;
+    background-color:eaeeee;
+    border:none;
 }
