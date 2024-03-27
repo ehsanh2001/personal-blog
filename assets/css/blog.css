@@ -1,20 +1,20 @@
-body{
+body {
     background-color: #eaeeee;
 }
 header {
     display: flex;
     border-bottom: 8px double grey;
 }
-header button{
+header button {
     height: 24px;
     margin-left: auto;
     align-self: center;
 }
-main{
+main {
     border-bottom: 8px double grey;
 }
 
-footer{
+footer {
     padding: 20px;
 }
 .card {
@@ -34,4 +34,8 @@ footer{
     font-weight: bolder;
     font-size: large;
     padding-left: 30px;
+}
+
+.card .content {
+    padding: 0px 30px;
 }
