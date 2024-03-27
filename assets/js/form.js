@@ -58,7 +58,7 @@ function storePost() {
         content: contentEl.value.trim(),
     };
 
-    blogData.push(newPost);
+    blogData.unshift(newPost);
     localStorage.setItem("blogData", JSON.stringify(blogData));
 }
 
@@ -107,7 +107,7 @@ function changeTheme() {
     } else {
         btnTheme.textContent = SUN_EMOJI;
         localStorage.setItem("theme", "SUN");
-        
+
         root.style.setProperty("--body-bg-color", "white");
         root.style.setProperty("--body-color", "black");
         root.style.setProperty("--link-color", "rgb(0,0,255)");
