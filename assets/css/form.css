@@ -1,9 +1,20 @@
+:root {
+    --body-bg-color: white;
+    --body-color: black;
+    --left-div-color1: rgb(183, 55, 0);
+    --left-div-color2: rgb(253, 205, 29);
+    --left-div-color3: rgb(252, 176, 69);
+    --error-color: red;
+    --link-color: rgb(0, 0, 255);
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--body-bg-color);
+    color: var(--body-color);
     height: 100%;
 }
 
-header{
+header {
     display: flex;
     padding: 10px;
     justify-content: flex-end;
@@ -25,6 +36,9 @@ textarea {
     margin-bottom: 10px;
 }
 
+a{
+    color:var(--link-color);
+}
 .col {
     display: flex;
     flex-direction: column;
@@ -38,36 +52,36 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(183, 55, 0);
+    background: var(--left-div-color1);
     background: linear-gradient(
         0deg,
-        rgba(183, 55, 0, 1) 0%,
-        rgba(253, 205, 29, 1) 50%,
-        rgba(252, 176, 69, 1) 100%
+        var(--left-div-color1) 0%,
+        var(--left-div-color2) 50%,
+        var(--left-div-color3) 100%
     );
     width: 300px;
-    height: 300%;
+    height: 300px;
     border-radius: 50%;
 }
 
 .error {
     position: relative;
     display: block;
-    border-color: red;
+    border-color: var(--error-color);
 }
 
 .error::after {
     display: block;
     position: absolute;
     content: "Please enter a value";
-    color: red;
+    color: var(--error-color);
     font-size: smaller;
     top: 0px;
     left: 80px;
 }
 
-#btn-theme{
+#btn-theme {
     font-size: 200%;
-    background-color:white;
-    border:none;
+    background-color: var(--body-bg-color);
+    border: none;
 }

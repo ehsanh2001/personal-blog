@@ -16,6 +16,21 @@ document.getElementById("blog-form").addEventListener("submit", formSubmit);
 document.getElementById("blog-form").addEventListener("keydown", clearError);
 btnTheme.addEventListener("click", changeTheme);
 
+loadTheme();
+
+function loadTheme() {
+    const theme = localStorage.getItem("theme") || "SUN";
+
+    //  the changeTheme() toggles the theme, so if the theme is stored as SUN we change the btnTheme to MOON_EMOJI and
+    // then call changeTheme() and vice versa for MOON
+    if (theme === "SUN") {
+        btnTheme.textContent = MOON_EMOJI;
+    } else {
+        btnTheme.textContent = SUN_EMOJI;
+    }
+    changeTheme();
+}
+
 function formSubmit(event) {
     event.preventDefault();
 
@@ -75,7 +90,29 @@ function clearError(event) {
     }
 }
 
+// To change the theme we not the rgb value of colors
 function changeTheme() {
-    if (btnTheme.textContent === SUN_EMOJI) btnTheme.textContent = MOON_EMOJI;
-    else btnTheme.textContent = SUN_EMOJI;
+    const root = document.documentElement;
+
+    if (btnTheme.textContent === SUN_EMOJI) {
+        btnTheme.textContent = MOON_EMOJI;
+        localStorage.setItem("theme", "MOON");
+
+        root.style.setProperty("--body-bg-color", "black");
+        root.style.setProperty("--body-color", "white");
+        root.style.setProperty("--link-color", "rgb(255,255,0)");
+        root.style.setProperty("--left-div-color1", "rgb(72,200,255)");
+        root.style.setProperty("--left-div-color2", "rgb(2,50,226)");
+        root.style.setProperty("--left-div-color3", "rgb(3,79,186)");
+    } else {
+        btnTheme.textContent = SUN_EMOJI;
+        localStorage.setItem("theme", "SUN");
+        
+        root.style.setProperty("--body-bg-color", "white");
+        root.style.setProperty("--body-color", "black");
+        root.style.setProperty("--link-color", "rgb(0,0,255)");
+        root.style.setProperty("--left-div-color1", "rgb(183, 55, 0)");
+        root.style.setProperty("--left-div-color2", "rgb(253, 205, 29)");
+        root.style.setProperty("--left-div-color3", "rgb(252, 176, 69)");
+    }
 }
