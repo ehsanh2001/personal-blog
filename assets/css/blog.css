@@ -1,0 +1,37 @@
+body{
+    background-color: #eaeeee;
+}
+header {
+    display: flex;
+    border-bottom: 8px double grey;
+}
+header button{
+    height: 24px;
+    margin-left: auto;
+    align-self: center;
+}
+main{
+    border-bottom: 8px double grey;
+}
+
+footer{
+    padding: 20px;
+}
+.card {
+    background-color: #eee;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.card .username {
+    margin: 5px;
+    border-bottom: 4px double black;
+    padding-bottom: 10px;
+}
+
+.card .title {
+    font-weight: bolder;
+    font-size: large;
+    padding-left: 30px;
+}
