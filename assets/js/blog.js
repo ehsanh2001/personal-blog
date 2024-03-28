@@ -44,11 +44,6 @@ function createCard(blogPost) {
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("card");
 
-    const usernameDiv = document.createElement("div");
-    usernameDiv.classList.add("username");
-    usernameDiv.textContent = blogPost.username;
-    cardDiv.appendChild(usernameDiv);
-
     const titleDiv = document.createElement("div");
     titleDiv.classList.add("title");
     titleDiv.textContent = blogPost.title;
@@ -58,6 +53,12 @@ function createCard(blogPost) {
     contentEl.classList.add("content");
     contentEl.innerHTML = blogPost.content;
     cardDiv.appendChild(contentEl);
+
+    const usernameDiv = document.createElement("div");
+    usernameDiv.classList.add("username");
+    usernameDiv.textContent = "Posted by: " + blogPost.username;
+    cardDiv.appendChild(usernameDiv);
+
     return cardDiv;
 }
 

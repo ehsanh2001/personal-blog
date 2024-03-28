@@ -36,23 +36,27 @@ a {
 .card {
     background-color: var(--card-bg-color);
     border: 1px solid var(--card-border-color);
-    padding: 10px;
+    padding: 10px 10px 0px 10px;
     margin: 10px;
 }
 
 .card .username {
+    display: inline;
     margin: 5px;
-    border-bottom: 4px double;
-    padding-bottom: 10px;
+    font-size: small;
+    border-top: 1px solid;
+    padding-top: 5px;
 }
 
 .card .title {
+    border-bottom: 4px double;
     font-weight: bolder;
     font-size: large;
     padding-left: 30px;
 }
 
 .card .content {
+    font-size: large;
     padding: 0px 30px;
 }
 
