@@ -58,7 +58,7 @@ function storePost() {
         content: contentEl.value.trim(),
     };
 
-    blogData.unshift(newPost);
+    blogData.push(newPost);
     localStorage.setItem("blogData", JSON.stringify(blogData));
 }
 
